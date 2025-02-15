@@ -2,8 +2,13 @@
 
 [![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://use-context-use-reducer-demo.vercel.app/)
 
+## Description
+
+### Old version
 A demonstration of React's `useContext` and `useReducer` hooks with TypeScript, featuring a theme switcher and counter application.
 
+### New version
+A modern state management implementation using Redux Toolkit with TypeScript, featuring a theme switcher and counter application.
 
 <img width="1728" alt="Screenshot 2025-02-15 at 21 45 32" src="https://github.com/user-attachments/assets/e624a3bb-02f9-4899-af88-4721d3b62a21" />
 <img width="1728" alt="Screenshot 2025-02-15 at 21 45 20" src="https://github.com/user-attachments/assets/831b3cf9-af0f-4bca-8487-92974399abb3" />
@@ -62,6 +67,10 @@ git push origin main
 
 ```
 /src
+├── app
+│   └── store.ts          # Redux store configuration
+├── features
+│   └── appSlice.ts       # Redux logic (reducer + actions)
 ├── contexts
 │   └── AppContext.tsx    # Context provider and types
 │   └── AppProvider.tsx   # Context provider component
@@ -79,7 +88,9 @@ git push origin main
 - TypeScript
 - Vite
 - Vercel Hosting
-- React Hooks (`useContext`, `useReducer`)
+- Redux Toolkit
+- React-Redux
+- React Hooks (`useContext`, `useReducer`) - Old version
 
 ## Learning Resources
 
@@ -89,10 +100,37 @@ This project demonstrates:
 - Type-safe context implementation
 - Global state management patterns
 - Component composition with Context API
+- Redux Toolkit store configuration
+- Creating feature slices with `createSlice`
+- Immutable state updates with Immer.js
+- Type-safe Redux implementation
+- React-Redux hooks (`useSelector`, `useDispatch`)
+- Modern Redux patterns and best practices
+
+## Why Redux Toolkit?
+
+This project demonstrates the modern approach to Redux with advantages including:
+- 75% less boilerplate code
+- Built-in Immer.js for mutable-style updates
+- Automatic action creators
+- TypeScript-first API
+- DevTools integration out-of-the-box
+- Official recommended approach for Redux
+
+## Learning Resources
+
+- [Redux Toolkit Official Docs](https://redux-toolkit.js.org/)
+- [React-Redux Hooks Guide](https://react-redux.js.org/api/hooks)
+- [TypeScript with Redux Toolkit](https://redux-toolkit.js.org/tutorials/typescript)
+- [Immer.js Immutable Updates](https://immerjs.github.io/immer/)
 
 ## Contributing
 
-Contributions are welcome! Please open an issue first to discuss what you'd like to change.
+Contributions welcome! Please follow these steps:
+1. Open an issue to discuss proposed changes
+2. Fork the repository
+3. Create a feature branch
+4. Submit a pull request
 
 ## License
 
