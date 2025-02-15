@@ -1,13 +1,15 @@
 import './App.css'
-import {useAppContext} from "./contexts/appReducer.ts";
-import {Counter} from "./src/components/Counter.tsx";
-import {ThemeSwitcher} from "./src/components/ThemeSwitcher.tsx";
+// import {useAppContext} from "./contexts/appReducer.ts";
+import {Counter} from "./components/Counter.tsx";
+import {ThemeSwitcher} from "./components/ThemeSwitcher.tsx";
+import {useSelector} from "react-redux";
+import {RootState} from "./app/store.ts";
 
 function App() {
-  const { state } = useAppContext();
+  const theme = useSelector((state: RootState) => state.app.theme);
 
   return (
-    <div className={`app ${state.theme}`}>
+    <div className={`app ${theme}`}>
         <h1>useContext + useReducer Demo</h1>
         <Counter />
         <ThemeSwitcher />
