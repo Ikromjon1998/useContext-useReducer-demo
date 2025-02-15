@@ -4,7 +4,9 @@
 
 A demonstration of React's `useContext` and `useReducer` hooks with TypeScript, featuring a theme switcher and counter application.
 
-![Demo Preview](https://user-images.githubusercontent.com/32848391/174492834-0b8d3a4d-7d9b-4c7e-aa1c-7b0e8a0d7a6f.gif) *(You can add a real screenshot/gif later)*
+
+<img width="1728" alt="Screenshot 2025-02-15 at 21 45 32" src="https://github.com/user-attachments/assets/e624a3bb-02f9-4899-af88-4721d3b62a21" />
+<img width="1728" alt="Screenshot 2025-02-15 at 21 45 20" src="https://github.com/user-attachments/assets/831b3cf9-af0f-4bca-8487-92974399abb3" />
 
 ## Live Demo
 
