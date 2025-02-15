@@ -1,50 +1,102 @@
-# React + TypeScript + Vite
+# React Context & Reducer Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://use-context-use-reducer-demo.vercel.app/)
 
-Currently, two official plugins are available:
+A demonstration of React's `useContext` and `useReducer` hooks with TypeScript, featuring a theme switcher and counter application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Demo Preview](https://user-images.githubusercontent.com/32848391/174492834-0b8d3a4d-7d9b-4c7e-aa1c-7b0e8a0d7a6f.gif) *(You can add a real screenshot/gif later)*
 
-## Expanding the ESLint configuration
+## Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Test the deployed application:  
+https://use-context-use-reducer-demo.vercel.app/
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Counter with increment/decrement/reset functionality
+- Light/dark theme toggle
+- Type-safe implementation with TypeScript
+- Global state management using React Context API
+- Vercel deployment with automatic CI/CD
+
+## Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/Ikromjon1998/useContext-useReducer-demo.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Install dependencies
+```bash
+npm install
 ```
+
+3. Run the development server
+```bash
+npm run dev
+```
+
+## Usage
+
+### Local Development
+```bash
+npm run dev
+```
+Open http://localhost:5173 in your browser
+
+### Production Build
+```bash
+npm run build
+npm run preview
+```
+
+### Deployment
+The project is configured for automatic deployment to Vercel on git push:
+```bash
+git push origin main
+```
+
+## Code Structure
+
+```
+/src
+├── contexts
+│   └── AppContext.tsx    # Context provider and types
+│   └── AppProvider.tsx   # Context provider component
+│   └── appReducer.ts     # Reducer function
+├── components
+│   ├── Counter.tsx       # Counter component
+│   └── ThemeSwitcher.tsx # Theme toggle component
+├── App.tsx               # Main application component
+└── main.tsx              # Entry point
+```
+
+## Technologies Used
+
+- React 18
+- TypeScript
+- Vite
+- Vercel Hosting
+- React Hooks (`useContext`, `useReducer`)
+
+## Learning Resources
+
+This project demonstrates:
+- How to create and consume React Context
+- Managing complex state with useReducer
+- Type-safe context implementation
+- Global state management patterns
+- Component composition with Context API
+
+## Contributing
+
+Contributions are welcome! Please open an issue first to discuss what you'd like to change.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/) *(Include your license file if needed)*
+
+---
+
+**Created with ❤️ by Ikromjon1998**  
+*Educational purpose project - React hooks demonstration*
